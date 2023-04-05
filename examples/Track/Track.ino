@@ -7,7 +7,7 @@
 
 #include <MusiciansMate.h>
 
-// This header file contains all the macro definitions for notes and their frequencies
+// This header file contains all the macro definitions for pitches and their frequencies
 #include "Pitches.h"
 
 
