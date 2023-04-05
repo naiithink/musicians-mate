@@ -26,7 +26,7 @@
 
 Metronome::Metronome(uint8_t buzzerPin, unsigned int tickNote, unsigned long tickDuration, uint32_t tempo)
 {
-    this->_buzzerPin = buzzerPin;
+    this->buzzerPin = buzzerPin;
     this->tickNote = tickNote;
     this->tickDuration = tickDuration;
     this->tempo = tempo;
@@ -46,7 +46,7 @@ bool Metronome::start()
 
     while (isPlaying == true && (isPlaying = metronomeStopObserver()) == true)
     {
-        tone(_buzzerPin, tickNote, tickDuration);
+        tone(buzzerPin, tickNote, tickDuration);
         delay(SEC_IN_MILLI / tempo);
     }
 

@@ -40,7 +40,7 @@ public:
     void setTempo(int);
 
 private:
-    uint8_t _buzzerPin;
+    uint8_t buzzerPin;
 
     unsigned int tickNote;
 

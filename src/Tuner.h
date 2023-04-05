@@ -35,7 +35,7 @@ public:
 protected:
     explicit Tuner(uint8_t, unsigned long);
 
-    uint8_t _buzzerPin;
+    uint8_t buzzerPin;
 
     instrument type;
 
