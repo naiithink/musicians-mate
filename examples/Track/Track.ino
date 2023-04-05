@@ -24,14 +24,14 @@
 // Define a track
 // Every track must be terminated with an element containing all zeros.
 track symphony[] = {
-    { NOTE_G7,      QNOTE_DURATION / 4  },
-    { NOTE_G7,      QNOTE_DURATION / 4  },
-    { NOTE_G7,      QNOTE_DURATION / 4  },
-    { NOTE_DS7,     QNOTE_DURATION * 2  },
-    { NOTE_F7,      QNOTE_DURATION / 4  },
-    { NOTE_F7,      QNOTE_DURATION / 4  },
-    { NOTE_F7,      QNOTE_DURATION / 4  },
-    { NOTE_D7,      QNOTE_DURATION * 2  },
+    { NOTE_G7,      1 / 8  },
+    { NOTE_G7,      1 / 8  },
+    { NOTE_G7,      1 / 8  },
+    { NOTE_DS7,     1 / 4  },
+    { NOTE_F7,      1 / 8  },
+    { NOTE_F7,      1 / 8  },
+    { NOTE_F7,      1 / 8  },
+    { NOTE_D7,      1 / 4  },
     { 0, 0 }
 };
 
