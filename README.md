@@ -1,4 +1,4 @@
-# Epic IoT's Musicians' Mate
+# Musicians' Mate
 
 > **Note**: This is an educational project.
 
@@ -11,7 +11,7 @@ An Arduino library that enables (some) musical functionalities primarily to Espr
 
         $ arduino-cli lib install --git-url https://github.com/naiithink/musicians-mate.git
 
-    `arduino-cli` is our preferred method.  
+    [`arduino-cli`](https://arduino.github.io/arduino-cli/latest/) is our preferred method.  
     See also: [Add libraries to Arduino IDE](https://support.arduino.cc/hc/en-us/articles/5145457742236-Add-libraries-to-Arduino-IDE)
 
 1. Then in a sketch file, make use of the library  
