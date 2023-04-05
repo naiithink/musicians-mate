@@ -27,9 +27,6 @@
 // Set the quarter note duration
 #define QNOTE_DURATION (1000 * 1 * 0.18)
 
-// Set the metronome ticks duration
-#define TUNER_DURATION (1000)
-
 // Joystick push button debouncing period
 #define DEBOUNCE_DELAY (unsigned long) 50
 
