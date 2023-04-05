@@ -36,7 +36,7 @@
 typedef struct track
 {
     int note;
-    unsigned long duration;
+    unsigned long relativeDuration;
 }
 track;
 
