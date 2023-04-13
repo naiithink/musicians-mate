@@ -31,7 +31,7 @@
 #define DEBOUNCE_DELAY (unsigned long) 50
 
 
-// Task handle for backgroud task
+// Task handle for background task
 TaskHandle_t BackgroundTask;
 
 // Current state of the joystick
@@ -49,7 +49,7 @@ unsigned long lastJoystickDebounceTime = millis();
 int metronomeState = -1;
 
 // Construct a Metronome instance
-Metronome *metronome = new Metronome(BUZZER_PIN, NOTE_F7, QNOTE_DURATION, DEFAULT_TEMPO);
+Metronome *metronome = new Metronome(BUZZER_PIN, P_F7, QNOTE_DURATION, DEFAULT_TEMPO);
 
 
 // This function runs on core #1
@@ -142,7 +142,11 @@ bool metronomeStopObserver()
 void toggleMetronomeState()
 {
     metronomeState *= -1;
-    Serial.println(metronomeState);
+
+    if (metronomeState > 0)
+        Serial.println("Play");
+    else
+        Serial.println("Pause");
 }
 
 
@@ -151,7 +155,7 @@ void increaseMetronomeTempo()
 {
     metronome->setTempo(metronome->getTempo() + 1);
     delay(300);
-    Serial.printf("Metronome tempo ++: %d\n", metronome->getTempo());
+    Serial.printf("Current tempo: %d\n", metronome->getTempo());
 }
 
 
@@ -160,5 +164,5 @@ void decreaseMetronomeTempo()
 {
     metronome->setTempo(metronome->getTempo() - 1);
     delay(300);
-    Serial.printf("Metronome tempo --: %d\n", metronome->getTempo());
+    Serial.printf("Current tempo: %d\n", metronome->getTempo());
 }

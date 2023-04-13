@@ -40,18 +40,18 @@ GuitarTuner::GuitarTuner(uint8_t buzzerPin, unsigned long playDuration)
     this->pitchCount = 6;
     this->playDuration = playDuration;
     this->pitches = new int[pitchCount] {
-        // NOTE_E2,
-        // NOTE_A2,
-        // NOTE_D3,
-        // NOTE_G3,
-        // NOTE_B3,
-        // NOTE_E4
-        NOTE_E5,
-        NOTE_A5,
-        NOTE_D6,
-        NOTE_G6,
-        NOTE_B6,
-        NOTE_E7
+        // P_E2,
+        // P_A2,
+        // P_D3,
+        // P_G3,
+        // P_B3,
+        // P_E4
+        P_E5,
+        P_A5,
+        P_D6,
+        P_G6,
+        P_B6,
+        P_E7
     };
 }
 

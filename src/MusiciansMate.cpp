@@ -26,13 +26,16 @@ void playTrack(uint8_t buzzerPin, track *piece, uint32_t tempo)
 {
     PRINT("Playing track");
 
-    uint32_t tempoDelay = SEC_IN_MILLI / tempo;
+    double tempoDelay = SEC_IN_MILLI / tempo;
+    double relativeDelay = 0.0;
     track *head = piece;
 
-    while (head->note != PIECE_TERMINATOR && head->relativeDuration != PIECE_TERMINATOR)
+    while (head->pitch != PIECE_TERMINATOR && head->relativeDuration != PIECE_TERMINATOR)
     {
-        tone(buzzerPin, head->note, tempoDelay * head->relativeDuration);
-        delay(tempoDelay * head->relativeDuration);
+        relativeDelay = tempoDelay * head->relativeDuration;
+        tone(buzzerPin, head->pitch, relativeDelay);
+        delay(relativeDelay);
+
         head++;
     }
 

@@ -60,10 +60,16 @@ void loop()
 
     // Joystick was moved to the left
     if (joystickX == 0)
+    {
         shiftStringDown();
+        delay(300);
+    }
     // Joystick was moved to the right
     else if (joystickX >= 4000)
+    {
         shiftStringUp();
+        delay(300);
+    }
 
     // Debouncing with delay period
     if ((millis() - lastJoystickDebounceTime) >= DEBOUNCE_DELAY)
@@ -86,7 +92,7 @@ void loop()
 // Shift string up
 void shiftStringUp()
 {
-    if (currentString < 4)
+    if (currentString < 5)
         currentString++;
 
     Serial.printf("String: %d\n", currentString);

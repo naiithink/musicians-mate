@@ -42,7 +42,7 @@ public:
 private:
     uint8_t buzzerPin;
 
-    unsigned int tickNote;
+    unsigned int tickPitch;
 
     unsigned long tickDuration;
 

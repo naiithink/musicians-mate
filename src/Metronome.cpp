@@ -24,10 +24,10 @@
 #include "Metronome.h"
 
 
-Metronome::Metronome(uint8_t buzzerPin, unsigned int tickNote, unsigned long tickDuration, uint32_t tempo)
+Metronome::Metronome(uint8_t buzzerPin, unsigned int tickPitch, unsigned long tickDuration, uint32_t tempo)
 {
     this->buzzerPin = buzzerPin;
-    this->tickNote = tickNote;
+    this->tickPitch = tickPitch;
     this->tickDuration = tickDuration;
     this->tempo = tempo;
     this->isPlaying = false;
@@ -46,7 +46,7 @@ bool Metronome::start()
 
     while (isPlaying == true && (isPlaying = metronomeStopObserver()) == true)
     {
-        tone(buzzerPin, tickNote, tickDuration);
+        tone(buzzerPin, tickPitch, tickDuration);
         delay(SEC_IN_MILLI / tempo);
     }
 

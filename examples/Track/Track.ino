@@ -17,21 +17,17 @@
 // Set default playing tempo to 109 BPM
 #define DEFAULT_TEMPO 109
 
-// Set the quarter note duration,
-// this track is supposed to be played in Legato -- the articulation.
-#define QNOTE_DURATION (1000 * 1 * 0.6)
-
 // Define a track
 // Every track must be terminated with an element containing all zeros.
 track symphony[] = {
-    { NOTE_G7,      1 / 8  },
-    { NOTE_G7,      1 / 8  },
-    { NOTE_G7,      1 / 8  },
-    { NOTE_DS7,     1 / 4  },
-    { NOTE_F7,      1 / 8  },
-    { NOTE_F7,      1 / 8  },
-    { NOTE_F7,      1 / 8  },
-    { NOTE_D7,      1 / 4  },
+    { P_G7,      NOTE_E  },
+    { P_G7,      NOTE_E  },
+    { P_G7,      NOTE_E  },
+    { P_DS7,     NOTE_H  },
+    { P_F7,      NOTE_E  },
+    { P_F7,      NOTE_E  },
+    { P_F7,      NOTE_E  },
+    { P_D7,      NOTE_H  },
     { 0, 0 }
 };
 
@@ -40,6 +36,8 @@ void setup() {
 
     // Set buzzer pin mode to OUTPUT
     pinMode(BUZZER_PIN, OUTPUT);
+
+    Serial.println("Done setup");
 }
 
 void loop() {

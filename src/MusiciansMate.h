@@ -23,6 +23,7 @@
 #include <stdint.h>
 
 #include "Metronome.h"
+#include "Notes.h"
 #include "Pitches.h"
 #include "Tuner.h"
 
@@ -35,8 +36,8 @@
 
 typedef struct track
 {
-    int note;
-    unsigned long relativeDuration;
+    int pitch;
+    double relativeDuration;
 }
 track;
 
