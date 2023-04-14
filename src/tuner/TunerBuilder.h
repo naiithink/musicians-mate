@@ -17,22 +17,23 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#ifndef TUNER_BUILDER_H
+#define TUNER_BUILDER_H
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
+#include <stdint.h>
 
-// Track
-#include "track/Track.h"
-
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
+#include "Tuner.h"
 
 
-#endif /* MUSICIANS_MATE_H */
+class TunerBuilder
+{
+public:
+    static Tuner *build(uint8_t, Instrument, unsigned long);
+
+private:
+    TunerBuilder();
+};
+
+
+#endif /* TUNER_BUILDER_H */

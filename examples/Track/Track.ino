@@ -7,9 +7,6 @@
 
 #include <MusiciansMate.h>
 
-// This header file contains all the macro definitions for pitches and their frequencies
-#include "Pitches.h"
-
 
 // Connect to a buzzer on digital pin 17
 #define BUZZER_PIN 17

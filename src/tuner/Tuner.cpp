@@ -17,22 +17,13 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#include <Arduino.h>
+
+#include "Tuner.h"
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
-
-// Track
-#include "track/Track.h"
-
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
-
-
-#endif /* MUSICIANS_MATE_H */
+Tuner::Tuner(uint8_t buzzerPin, unsigned long playDuration)
+{
+    this->buzzerPin = buzzerPin;
+    this->playDuration = playDuration;
+}

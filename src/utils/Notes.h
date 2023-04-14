@@ -17,22 +17,25 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#ifndef NOTES_H
+#define NOTES_H
 
+// Whole note
+#define NOTE_W      (double) 4
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
+// Half note
+#define NOTE_H      (double) 2
 
-// Track
-#include "track/Track.h"
+// Quarter note
+#define NOTE_Q      (double) 1
 
-// Metronome
-#include "metronome/Metronome.h"
+// Eighth note
+#define NOTE_E      (double) 0.5
 
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
+// Sixteenth note
+#define NOTE_S      (double) 0.25
 
+// Thirty-second note
+#define NOTE_T      (double) 0.125
 
-#endif /* MUSICIANS_MATE_H */
+#endif /* NOTES_H */

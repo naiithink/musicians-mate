@@ -17,22 +17,27 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#include <Arduino.h>
+
+#include "../utils/Utils.h"
+
+#include "TunerBuilder.h"
+
+#include "GuitarTuner.h"
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
+Tuner *TunerBuilder::build(uint8_t buzzerPin, Instrument type, unsigned long playDuration)
+{
+    Tuner *tuner;
 
-// Track
-#include "track/Track.h"
+    switch (type)
+    {
+        case GUITAR:
+            tuner = (Tuner *) new GuitarTuner(buzzerPin, playDuration);
+            break;
+        default:
+            PRINT("Unknown instrument");
+    }
 
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
-
-
-#endif /* MUSICIANS_MATE_H */
+    return tuner;
+}

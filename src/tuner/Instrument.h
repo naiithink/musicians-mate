@@ -17,22 +17,15 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#ifndef INSTRUMENT_H
+#define INSTRUMENT_H
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
-
-// Track
-#include "track/Track.h"
-
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
+typedef enum
+{
+    GUITAR = 1
+}
+Instrument;
 
 
-#endif /* MUSICIANS_MATE_H */
+#endif /* INSTRUMENT_H */

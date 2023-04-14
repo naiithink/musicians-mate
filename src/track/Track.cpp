@@ -17,22 +17,33 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#include <Arduino.h>
+
+#include "../utils/Utils.h"
+#include "../utils/Pitches.h"
+#include "../utils/Notes.h"
+
+#include "Track.h"
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
+void playTrack(uint8_t buzzerPin, track *piece, uint32_t tempo)
+{
+    PRINT("Playing track");
 
-// Track
-#include "track/Track.h"
+    double tempoDelay = SEC_IN_MILLI / tempo;
+    double relativeDelay = 0.0;
+    track *head = piece;
 
-// Metronome
-#include "metronome/Metronome.h"
+    while (head->pitch != PIECE_TERMINATOR && head->relativeDuration != PIECE_TERMINATOR)
+    {
+        relativeDelay = tempoDelay * head->relativeDuration;
+        tone(buzzerPin, head->pitch, relativeDelay);
+        delay(relativeDelay);
 
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
+        head++;
+    }
 
+    noTone(buzzerPin);
 
-#endif /* MUSICIANS_MATE_H */
+    PRINT("Done playing track");
+}

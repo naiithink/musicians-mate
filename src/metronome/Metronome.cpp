@@ -1,5 +1,5 @@
 /*
- * Epic IoT's implementation of Musicians' Mate Arduino Library in C++
+ * Epic IoT's implementation of MusiciansMate Arduino library in C++
  * Copyright (C) 2023 The Epic IoT Team
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 
 #include <Arduino.h>
 
-#include "MusiciansMate.h"
+#include "../utils/Utils.h"
 
 #include "Metronome.h"
 

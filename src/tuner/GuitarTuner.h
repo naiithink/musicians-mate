@@ -1,5 +1,5 @@
 /*
- * Epic IoT's implementation of Musicians' Mate Arduino Library in C++
+ * Epic IoT's implementation of MusiciansMate Arduino library in C++
  * Copyright (C) 2023 The Epic IoT Team
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,41 +17,22 @@
  */
 
 
-#ifndef METRONOME_H
-#define METRONOME_H
+#ifndef GUITAR_TUNER_H
+#define GUITAR_TUNER_H
 
 
-extern bool metronomeStopObserver();
+#include <stdint.h>
+
+#include "Tuner.h"
 
 
-class Metronome
+class GuitarTuner : protected Tuner
 {
 public:
-    explicit Metronome(uint8_t, unsigned int, unsigned long, uint32_t);
+    explicit GuitarTuner(uint8_t, unsigned long);
 
-    bool start();
-
-    bool stop();
-
-    bool getIsPlaying();
-
-    int getTempo();
-
-    void setTempo(int);
-
-private:
-    uint8_t buzzerPin;
-
-    unsigned int tickPitch;
-
-    unsigned long tickDuration;
-
-    // The current metronome tempo
-    uint32_t tempo;
-
-    // Current metronome state
-    // Set either by the external `metronomeStopObserver()' function or by the `Metronome::stop()' method
-    bool isPlaying;
+    bool playPitch(const int);
 };
 
-#endif /* METRONOME_H */
+
+#endif /* GUITAR_TUNER_H */

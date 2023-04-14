@@ -1,5 +1,5 @@
 /*
- * Epic IoT's implementation of Musicians' Mate Arduino Library in C++
+ * Epic IoT's implementation of MusiciansMate Arduino library in C++
  * Copyright (C) 2023 The Epic IoT Team
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,26 +20,3 @@
 #include <Arduino.h>
 
 #include "MusiciansMate.h"
-
-
-void playTrack(uint8_t buzzerPin, track *piece, uint32_t tempo)
-{
-    PRINT("Playing track");
-
-    double tempoDelay = SEC_IN_MILLI / tempo;
-    double relativeDelay = 0.0;
-    track *head = piece;
-
-    while (head->pitch != PIECE_TERMINATOR && head->relativeDuration != PIECE_TERMINATOR)
-    {
-        relativeDelay = tempoDelay * head->relativeDuration;
-        tone(buzzerPin, head->pitch, relativeDelay);
-        delay(relativeDelay);
-
-        head++;
-    }
-
-    noTone(buzzerPin);
-
-    PRINT("Done playing track");
-}

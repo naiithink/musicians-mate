@@ -17,22 +17,10 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#ifndef UTILS_H
+#define UTILS_H
 
+#define SEC_IN_MILLI (1000 * 60)
+#define PRINT(MSG) (Serial.printf("%s: %s\n", __func__, MSG))
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
-
-// Track
-#include "track/Track.h"
-
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
-
-
-#endif /* MUSICIANS_MATE_H */
+#endif /* UTILS_H */

@@ -17,22 +17,24 @@
  */
 
 
-#ifndef MUSICIANS_MATE_H
-#define MUSICIANS_MATE_H
+#ifndef TRACK_H
+#define TRACK_H
 
 
-#include "utils/Notes.h"
-#include "utils/Pitches.h"
+#define PIECE_TERMINATOR (int) 0
 
-// Track
-#include "track/Track.h"
-
-// Metronome
-#include "metronome/Metronome.h"
-
-// Tuners
-#include "tuner/TunerBuilder.h"
-#include "tuner/GuitarTuner.h"
+#include <stdint.h>
 
 
-#endif /* MUSICIANS_MATE_H */
+typedef struct track
+{
+    int pitch;
+    double relativeDuration;
+}
+track;
+
+
+void playTrack(uint8_t, track *, uint32_t);
+
+
+#endif /* TRACK_H */
