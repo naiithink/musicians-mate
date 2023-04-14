@@ -39,12 +39,6 @@ GuitarTuner::GuitarTuner(uint8_t buzzerPin, unsigned long playDuration)
         P_G3,
         P_B3,
         P_E4
-        // P_E5,
-        // P_A5,
-        // P_D6,
-        // P_G6,
-        // P_B6,
-        // P_E7
     };
 }
 
