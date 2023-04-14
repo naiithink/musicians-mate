@@ -5,24 +5,16 @@
 An Arduino library that enables (some) musical functionalities primarily to Espressif's ESP32 boards.
 
 
-## Getting Started
+## Installation
 
-1. Install the library via Git repository URL  
+You can install `MusiciansMate` via the [Arduino Library Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library).  
+Latest version is recommended.
 
-        $ arduino-cli lib install --git-url https://github.com/naiithink/musicians-mate.git
 
-    [`arduino-cli`](https://arduino.github.io/arduino-cli/latest/) is our preferred method.  
-    See also: [Add libraries to Arduino IDE](https://support.arduino.cc/hc/en-us/articles/5145457742236-Add-libraries-to-Arduino-IDE)
+## Usage
 
-1. Then in a sketch file, make use of the library  
-
-    ```cpp
-    #include <MusiciansMate.h>
-
-    ...
-    ```
-
-1. There's no next step
+Just include the `MusiciansMate.h` header and you're ready to &#127926;.  
+See [examples](examples) for more.
 
 
 ## The Epic IoT Team
