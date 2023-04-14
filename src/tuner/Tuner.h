@@ -23,14 +23,14 @@
  * 1. Implement a new tuner class that inherits the `Tuner' class, place it in
  *    the `tuners/' directory.
  * 2. Modify `Tuner.h':
- *  2.1. Add an enum constant depicting the tuner to the `instrument' enum type
- *       in `Tuner.h'.
+ *  2.1. Add an enum constant depicting the tuner to the `Instrument' enum type
+ *       in `Instrument.h'.
  *  2.2. Add a switch-case statement to
- *       `TunerBuilder::build(uint8_t, instrument, unsigned long)' that catches
- *       the `instrument' type of the new tuner with value corresponding to enum
+ *       `TunerBuilder::build(uint8_t, Instrument, unsigned long)' that catches
+ *       the `Instrument' type of the new tuner with value corresponding to enum
  *       constant added through the previous step.
  * 3. Add an include statement including the header of the new tuner
- *    to `MusiciansMate.h' and `Tuner.cpp'
+ *    to `MusiciansMate.h' and `TunerBuilder.cpp'
  */
 
 
