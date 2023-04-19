@@ -16,6 +16,9 @@
 
 // Define a track
 // Every track must be terminated with an element containing all zeros.
+// { <PITCH>, <NOTE> }
+// PITCH macros were defined in `src/utils/Pitches.h'
+// NOTE macros were defined in `src/utils/Notes.h'
 track symphony[] = {
     { P_G7,      NOTE_E  },
     { P_G7,      NOTE_E  },

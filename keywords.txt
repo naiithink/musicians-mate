@@ -1,32 +1,6 @@
-# MusiciansMate.h
-track	KEYWORD3
-playTrack	KEYWORD2
-
-
-# Metronome.h
-metronomeStopObserver	KEYWORD2
-
-Metronome	KEYWORD1
-start	KEYWORD2
-stop	KEYWORD2
-getIsPlaying	KEYWORD2
-getTempo	KEYWORD2
-setTempo	KEYWORD2
-
-
-# Tuner.h
-instrument	KEYWORD1
-
-Tuner	KEYWORD1
-playPitch	KEYWORD2
-
-TunerBuilder	KEYWORD1
-build	KEYWORD2
-
-GuitarTuner	KEYWORD1
-
-
-# Pitches.h
+###############################################################################
+# utils/Pitches.h
+###############################################################################
 P_B0	LITERAL1
 P_C1	LITERAL1
 P_CS1	LITERAL1
@@ -118,10 +92,66 @@ P_D8	LITERAL1
 P_DS8	LITERAL1
 
 
-# Notes.h
+
+###############################################################################
+# utils/Notes.h
+###############################################################################
 NOTE_W	LITERAL1
 NOTE_H	LITERAL1
 NOTE_Q	LITERAL1
 NOTE_E	LITERAL1
 NOTE_S	LITERAL1
 NOTE_T	LITERAL1
+
+
+
+###############################################################################
+# track/Track.h
+###############################################################################
+track	KEYWORD3
+playTrack	KEYWORD2
+
+
+
+###############################################################################
+# metronome/Metronome.h
+###############################################################################
+metronomeStopObserver	KEYWORD2
+
+Metronome	KEYWORD1
+start	KEYWORD2
+stop	KEYWORD2
+getIsPlaying	KEYWORD2
+getTempo	KEYWORD2
+setTempo	KEYWORD2
+
+
+
+###############################################################################
+# tuner/TunerBuilder.h
+###############################################################################
+TunerBuilder	KEYWORD1
+build	KEYWORD2
+
+
+
+###############################################################################
+# tuner/Instrument.h
+###############################################################################
+Instrument	KEYWORD1
+GUITAR	LITERAL1
+
+
+
+###############################################################################
+# tuner/Tuner.h
+###############################################################################
+Tuner	KEYWORD1
+playPitch	KEYWORD2
+
+
+
+###############################################################################
+# tuner/GuitarTuner.h
+###############################################################################
+GuitarTuner	KEYWORD1

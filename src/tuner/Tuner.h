@@ -21,16 +21,22 @@
  * ==================
  * 
  * 1. Implement a new tuner class that inherits the `Tuner' class, place it in
- *    the `tuners/' directory.
- * 2. Modify `Tuner.h':
- *  2.1. Add an enum constant depicting the tuner to the `Instrument' enum type
- *       in `Instrument.h'.
- *  2.2. Add a switch-case statement to
- *       `TunerBuilder::build(uint8_t, Instrument, unsigned long)' that catches
- *       the `Instrument' type of the new tuner with value corresponding to enum
- *       constant added through the previous step.
+ *    the `tuner/' directory.
+ * 2. Modify existing source files:
+ *    2.1. Add an enum constant depicting the tuner to the `Instrument' enum type
+ *         in `Instrument.h'.
+ *    2.2. Add a switch-case statement to
+ *         `TunerBuilder::build(uint8_t, Instrument, unsigned long)' that catches
+ *         the `Instrument' type of the new tuner with value corresponding to enum
+ *         constant added through the previous step.
  * 3. Add an include statement including the header of the new tuner
- *    to `MusiciansMate.h' and `TunerBuilder.cpp'
+ *    to `MusiciansMate.h' and `TunerBuilder.cpp'.
+ * 4. Add all related keywords to `keywords.txt'
+ *    4.1. Append to the section 'tuner/Instrument.h', the `Instrument' enum
+ *         constant just defined in step <2.1.>.
+ *    4.2. Add a new section with the name of the path to your new tuner class
+ *         header file, relative to the `/src/' directory.  Then define all
+ *         the keywords under that section.
  */
 
 

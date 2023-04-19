@@ -2,7 +2,7 @@
 
 > **Note**: This is an educational project.
 
-An Arduino library that enables (some) musical functionalities primarily to Espressif's ESP32 boards.
+An Arduino library that helps you develop your musical IoT devices.
 
 
 ## Installation
